@@ -7,20 +7,20 @@
 	$codigo = 0;
 	$nome = $_POST['nome'];
 	$email = $_POST['email'];
-    $telefone = $_POST['telefone'];
+	$telefone = $_POST['telefone'];
+	$cpf = "";
+	$cnpj = "";
     if(isset($_POST['campo_cpf'])){
         $cpf = $_POST['campo_cpf'];
-        $cnpj = "";
     } else {
         $cnpj = $_POST['campo_cnpj'];
-        $cpf = "";
     }
     $cep = $_POST['cep'];
     $logradouro = $_POST['logradouro'];
     $numero = $_POST['numero'];
     $bairro = $_POST['bairro'];
 	$cidade = $_POST['cidade'];
-    $estado = $_POST['estado'];
+	$estado = $_POST['UF'];
 
 	//Criando SQL
 	$sql = "INSERT INTO cliente VALUES(:codigo,:nome,:email,:telefone,:cpf,:cnpj,:cep,:logradouro,:numero,:bairro,:cidade,:estado)";
@@ -44,9 +44,14 @@
 
 	//Executando instrução
 	if ($comando->execute()) {
-		echo "Cadastro efetuado com sucesso";
+		echo "<script>
+			alert('Cadastro realizado com sucesso');
+		</script>";
 	} else {
-		echo "erro ao efetuar o cadastro";
+		echo "<script>
+			alert('Erro ao efetuar cadastro, tente novamente');
+		</script>";
 	}
 
 ?>
+<meta http-equiv="refresh" content="0;url=../index.html">
