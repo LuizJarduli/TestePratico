@@ -38,7 +38,7 @@ body {
 
 .container {
     width: 600px;
-    height: 100%;
+    height: auto;
     background-color: #fff;
     border: 1px solid #ccc;
     padding: 10px;
@@ -106,5 +106,13 @@ body {
 #cidade.controle,
 #bairro.controle,
 #UF.controle {
-    width: 150px;
+    width: 158px;
+}
+
+.botao {
+    color: white;
+    background-color: rgb(158, 24, 182);
+    border: none;
+    padding: 15px;
+    margin-left: 88.7%;
 }
