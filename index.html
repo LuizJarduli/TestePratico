@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teste prático</title>
     <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/main.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -17,7 +18,7 @@
             <div class="itens">
                 <ul>
                     <li><a href="./index.html" class="ativo">Cadastro</a></li>
-                    <li><a href="#">Listagem</a></li>
+                    <li><a href="./listar.php">Listagem</a></li>
                 </ul>
             </div>
         </nav>
@@ -26,16 +27,16 @@
             <br>
             <div class="container">
                 <br>
-                <form action="cadastro.php" method="POST" name="form">
+                <form action="./banco_de_dados/cadastrar.php" method="POST" name="form" onsubmit="removeMascara()">
                     <input type="text" name="nome" id="nome" class="controle" placeholder="Nome" required>
                     <input type="email" name="email" id="email" class="controle" placeholder="Email" required>
-                    <input type="number" name="telefone" id="telefone" class="controle" placeholder="Telefone" required><br><br>
+                    <input type="text" name="telefone" id="telefone" class="controle" maxlength="15" placeholder="Telefone" required onkeydown="javascript: fMasc( this, mTel );"><br><br>
                     <h4>Escolha uma opção</h4><br>
-                    <input type="radio" name="opcao" id="cpf">&nbsp;&nbsp;CPF &nbsp;&nbsp;
-                    <input type="radio" name="opcao" id="cnpj">&nbsp;&nbsp;CNPJ <br><br>
-                    <input type="number" name="campo_cpf" id="campo_cpf" maxlength="11" class="controle" placeholder="CPF" required>
-                    <input type="number" name="campo_cnpj" id="campo_cnpj" maxlength="14" class="controle" placeholder="CNPJ" required>
-                    <input type="number" name="cep" id="cep" class="controle" placeholder="CEP" required>
+                    <input type="radio" name="opcao" id="cpf" onclick="seleciona()">&nbsp;&nbsp;CPF &nbsp;&nbsp;
+                    <input type="radio" name="opcao" id="cnpj" onclick="seleciona()">&nbsp;&nbsp;CNPJ <br><br>
+                    <input type="text" name="campo_cpf" id="campo_cpf" maxlength="14" class="controle" placeholder="CPF" onkeydown="javascript: fMasc( this, mCPF );">
+                    <input type="text" name="campo_cnpj" id="campo_cnpj" maxlength="18" class="controle" placeholder="CNPJ" onkeydown="javascript: fMasc( this, mCNPJ );">
+                    <input type="text" name="cep" id="cep" class="controle" maxlength="10" placeholder="CEP" required onkeydown="javascript: fMasc( this, mCEP );">
                     <input type="text" name="logradouro" id="logradouro" class="controle" placeholder="Logradouro" required>
                     <input type="number" name="numero" id="numero" class="controle" required placeholder="Nº">
                     <input type="text" name="bairro" id="bairro" class="controle" placeholder="Bairro" required>
@@ -77,6 +78,7 @@
         <footer class="footer">
             <p>Luiz Miguel - Teste prático</p>
         </footer>
+
     </div>
 </body>
 
