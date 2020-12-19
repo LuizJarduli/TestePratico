@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: #fff;
+    background-color: rgb(252, 246, 246);
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
@@ -31,7 +31,6 @@ body {
     padding-bottom: 50px;
     width: 100%;
     height: 500px;
-    background-color: rgb(252, 246, 246);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -91,16 +90,21 @@ body {
 
 .controle {
     padding: 10px 10px 10px 10px;
-    margin-right: 10px;
     margin-bottom: 10px;
-    width: 250px;
+    width: 273.5px;
     border-color: #000;
-}
-
-#UF.controle {
-    width: 150px;
 }
 
 #nome.controle {
     width: 96%;
+}
+
+#numero.controle {
+    width: 40px;
+}
+
+#cidade.controle,
+#bairro.controle,
+#UF.controle {
+    width: 150px;
 }

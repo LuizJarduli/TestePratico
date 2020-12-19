@@ -33,7 +33,12 @@
                     <h4>Escolha uma opção</h4><br>
                     <input type="radio" name="opcao" id="cpf">&nbsp;&nbsp;CPF &nbsp;&nbsp;
                     <input type="radio" name="opcao" id="cnpj">&nbsp;&nbsp;CNPJ <br><br>
-                    <!-- <select id="UF" name="UF" class="controle" required>
+                    <input type="number" name="cep" id="cep" class="controle" placeholder="CEP" required>
+                    <input type="text" name="logradouro" id="logradouro" class="controle" placeholder="Logradouro" required>
+                    <input type="number" name="numero" id="numero" class="controle" required placeholder="Nº">
+                    <input type="text" name="bairro" id="bairro" class="controle" placeholder="Bairro" required>
+                    <input type="text" name="cidade" id="cidade" class="controle" placeholder="Cidade" required>
+                    <select id="UF" name="UF" class="controle" required>
                         <option value="" disabled="true">Estado</option>
                         <option value="AC">Acre</option>
                         <option value="AL">Alagoas</option>
@@ -62,7 +67,7 @@
                         <option value="SP">São Paulo</option>
                         <option value="SE">Sergipe</option>
                         <option value="TO">Tocantins</option>
-                    </select> -->
+                    </select>
                     <input type="submit" value="Enviar" class="botao">
                 </form>
             </div>
