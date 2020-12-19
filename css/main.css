@@ -109,6 +109,11 @@ body {
     width: 158px;
 }
 
+#campo_cpf,
+#campo_cnpj {
+    display: none;
+}
+
 .botao {
     color: white;
     background-color: rgb(158, 24, 182);
