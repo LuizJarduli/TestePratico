@@ -36,7 +36,7 @@
                     <input type="radio" name="opcao" id="cnpj" onclick="seleciona()">&nbsp;&nbsp;CNPJ <br><br>
                     <input type="text" name="campo_cpf" id="campo_cpf" maxlength="14" class="controle" placeholder="CPF" onkeydown="javascript: fMasc( this, mCPF );">
                     <input type="text" name="campo_cnpj" id="campo_cnpj" maxlength="18" class="controle" placeholder="CNPJ" onkeydown="javascript: fMasc( this, mCNPJ );">
-                    <input type="text" name="cep" id="cep" class="controle" maxlength="10" placeholder="CEP" required onkeydown="javascript: fMasc( this, mCEP );">
+                    <input type="text" name="cep" id="cep" class="controle" maxlength="10" placeholder="CEP" required onkeydown="javascript: fMasc( this, mCEP );" onblur="pesquisacep(this.value);">
                     <input type="text" name="logradouro" id="logradouro" class="controle" placeholder="Logradouro" required>
                     <input type="number" name="numero" id="numero" class="controle" required placeholder="Nº">
                     <input type="text" name="bairro" id="bairro" class="controle" placeholder="Bairro" required>
